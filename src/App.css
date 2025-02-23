@@ -1,0 +1,180 @@
+#root {
+
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* ******************************************************* */
+.header{
+  position: relative;
+  box-shadow: 2px -6px 33px #bfbfbf
+}
+.header .logo{
+  height: 110px;
+}
+.header .logo img{
+  object-position: center center;
+  height: 100%;
+  object-fit: cover;
+}
+.header .comapny{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex
+;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.header .comapny h2 span{
+  color: #5f56c6;
+}
+.salarydetials {
+  margin-top: 40px;
+}
+.salarydetials .head{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.salarydetials h5{
+  font-size: 18px;
+  color: #7d7d7d;
+  margin-bottom: 15px;
+}
+.salarydetials h5 span{
+  color: #000000;
+  margin-left: 10px;
+}
+
+.slip .net{
+  background: #edecff;
+  padding: 40px;
+
+}
+.slip .net::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 27px;
+  display: block;
+  height: 76px;
+  width: 4px;
+  background-color: #5f56c6;
+  transform: translateY(40px);
+}
+.slip .net h3{
+
+}
+.slip .net span{
+
+}
+.slip{
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+  /* padding: 10px ; */
+  overflow: hidden;
+  position: relative;
+}
+.slip-container{
+  padding-bottom: 50px;
+}
+.slip-container hr{
+  border-style: dotted;
+  margin: 30px 0;
+}
+.pfno{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.pfno h5{
+  font-size: 18px;
+  color: #7d7d7d;
+  margin-bottom: 15px;
+}
+.pfno h5 span{
+  color: #000000;
+  margin-left: 10px;
+}
+.salarystucture table {
+
+}
+.salarystucture .table thead tr  th{
+  background: #edecff;
+}
+.bottom td{
+  background: #edecff;
+}
+.bottom td{
+ font-weight: 700;
+}
+
+.to{
+  padding: 20px;
+  background-color:#edecff;
+}
+.totalerning{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #bfbfbf;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.tit{
+  padding: 10px;
+}
+.btn1{
+  margin-top: 40px;
+  display: flex;
+  justify-content: end;
+
+}
+.btn1 button{
+  border: none;
+  color: #fff;
+  background-color: #5f56c6;
+  transition: all .3s linear
+}
+.btn1 button:hover{
+  background-color: #000000;
+}
