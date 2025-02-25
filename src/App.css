@@ -173,7 +173,8 @@
   border: none;
   color: #fff;
   background-color: #5f56c6;
-  transition: all .3s linear
+  transition: all .3s linear;
+  margin-bottom: 50px;
 }
 .btn1 button:hover{
   background-color: #000000;

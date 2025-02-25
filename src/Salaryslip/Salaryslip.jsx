@@ -1,6 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const Salaryslip = () => {
+    const slipRef = useRef();
+
+    const downloadpdf =()=>{
+        const input = slipRef.current;
+        html2canvas(input,{scale:2}).then((canvas)=>{
+            const imgData = canvas.toDataURL("image/png");
+            const spdf = new jsPDF("p", "mm", "a4");
+            const imgWidth = 210;
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            spdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+            s   pdf.save("salary_Slip.pdf");
+        })
+    }
     const empd = {
         empname: "Devendra Mali",
         designation: "Front-end-developer",
@@ -31,7 +46,7 @@ const Salaryslip = () => {
     const total = grossern - disct
     return (
         <>
-            <div className="container slip-container">
+            <div className="container slip-container" ref={slipRef}>
                 <div className="row">
                     <div className="col-lg-6">
                         <div className="contain">
@@ -155,10 +170,13 @@ const Salaryslip = () => {
                     <h3>₹{total}.00</h3>
                     </div>
                 </div>
+              
+            </div> 
+             <div className="container">
                 <div className="btn1 d-flex align-items-end">
-                    <button>Download Salary Slip</button>
+                    <button onClick={downloadpdf }>Download Salary Slip</button>
                 </div>
-            </div>
+             </div>
         </>
     )
 }
