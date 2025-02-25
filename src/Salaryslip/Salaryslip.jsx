@@ -13,7 +13,7 @@ const Salaryslip = () => {
             const imgWidth = 210;
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
             spdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
-            s   pdf.save("salary_Slip.pdf");
+            spdf.save("salary_Slip.pdf");
         })
     }
     const empd = {
